@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@font-face {
+    font-family: space;
+    src: url('./assets/Space.ttf');
+}
+
+.containerMain {
+    width: min(80%, 960px);
+    margin: auto;
+    text-align: center;
+}
+
+.containerMain img {
+    object-fit: cover;
+    position: fixed;
+    z-index: -999;
+    min-width: 100vw;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.mainh1 {
+    margin-top: 20%;
+    font-family: space;
+    color: #fff;
+    font-size: 6rem;
+    font-weight: bold;
+}
+
+.main {
+    margin-top: 1rem;
+    font-family: space;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.button {
+    background-color: #2dabf9;
+    border-radius: 10px;
+    border: 1px solid #0b0e07;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Space;
+    font-size: 15px;
+    padding: 20px 60px;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.button:hover {
+    transition: ease-in 1s;
+    background-color: cornflowerblue;
+}
