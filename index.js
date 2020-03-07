@@ -56,10 +56,11 @@ const setPlay = () => {
     "y",
     "z"
   ];
-  const setPlay = () => {
+  const resetPlay = () => {
     guessed = [];
     guessedCorrectly = [];
     guessesRemaining = 10;
+    setQuestion();
   };
 
   let word = "";
@@ -72,7 +73,7 @@ const setPlay = () => {
     }
   }
   answerDocument.innerHTML = word;
-
+  let playing = true;
   let guessed = [];
   let guessedCorrectly = [];
   let guessesRemaining = 10;
@@ -85,6 +86,16 @@ const setPlay = () => {
         console.log("guessed" + guessed);
         guessed.push(key);
         guessesRemaining--;
+        if (guessesRemaining === 0) {
+          word = answer;
+          let again = confirm("try again?");
+          console.log(again);
+          if (again) {
+            playing = false;
+            setPlay();
+          }
+        }
+
         // console.log(guessesRemaining);
       } else if (
         answer.indexOf(key) !== -1 &&
@@ -97,19 +108,25 @@ const setPlay = () => {
             console.log("index is " + i);
             console.log("letter is " + answer[i]);
             word = word.replace(word[i], key);
-            console.log(word);
             allIndexes.push(answer[i]);
           }
         }
 
         if (guessedCorrectly.length == answer.length) {
           alert("YAY! You're like Einstein");
+          playing = false;
           setPlay();
         }
       }
-
-      turnsDocument.innerHTML = guessesRemaining;
-      guessesDocument.innerHTML = guessed.join("");
+      if (playing === true) {
+        answerDocument.innerHTML = word;
+        turnsDocument.innerHTML = guessesRemaining;
+        guessesDocument.innerHTML = guessed.join("");
+      }
+      if (playing === false) {
+        turnsDocument.innerHTML = 10;
+        guessesDocument.innerHTML = "";
+      }
     }
   };
 };
