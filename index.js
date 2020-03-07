@@ -26,7 +26,6 @@ var questions = [
 ];
 
 const setPlay = () => {
-  console.log(questions.length);
   let Random = {};
   const setQuestion = () => {
     Random = questions[Math.floor(Math.random() * questions.length)];
@@ -38,8 +37,6 @@ const setPlay = () => {
   var answerDocument = document.getElementById("answer");
   var turnsDocument = document.getElementById("turns");
   var guessesDocument = document.getElementById("guesses");
-
-  console.log(answer.length);
 
   questionDocument.innerHTML = question;
 
@@ -73,6 +70,8 @@ const setPlay = () => {
   ];
   const resetPlay = () => {
     guessed = [];
+    playing = true;
+    correctCount = 0;
     guessedCorrectly = [];
     guessesRemaining = 10;
     setQuestion();
@@ -89,13 +88,12 @@ const setPlay = () => {
   }
   answerDocument.innerHTML = word;
   let playing = true;
+  let correctCount = 0;
   let guessed = [];
   let guessedCorrectly = [];
   let guessesRemaining = 10;
 
   document.onkeydown = () => {
-    console.log(answer.length);
-    console.log(word.length);
     let key = event.key;
 
     if (alphabet.includes(key)) {
@@ -120,6 +118,7 @@ const setPlay = () => {
         for (var i = 0; i < answer.length; i++) {
           if (answer[i] === key) {
             newWord = newWord += answer[i];
+            correctCount++;
           } else {
             newWord = newWord += word[i];
           }
@@ -127,8 +126,17 @@ const setPlay = () => {
         }
         word = newWord;
       }
+      let Length = 0;
+      for (var trueLength = 0; trueLength < answer.length; trueLength++) {
+        if (answer[trueLength] !== " ") {
+          Length++;
+        }
+      }
+      console.log("correct " + correctCount);
+      console.log("length" + Length);
+      console.log("guessedCorrectly" + guessedCorrectly);
 
-      if (guessedCorrectly.length == answer.length) {
+      if (correctCount === Length) {
         alert("YAY! You're like Einstein");
         playing = false;
         setPlay();
