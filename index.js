@@ -22,6 +22,7 @@ var questionDocument = document.getElementById("question");
 var answerDocument = document.getElementById("answer");
 
 document.onkeydown = () => {
+  //   alert("fix alignment of index page and commit");
   console.log(event.key);
 };
 

@@ -62,8 +62,33 @@ a {
 
 
 
+
+
+.button:hover {
+    transition: ease-in 1s;
+    background-color: cornflowerblue;
+}
+
+
+
+
+
+#mainTitle {
+    position: absolute;
+    ;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* fill: white !important; */
+    /* animation: fill 1s ease forwards 2s; */
+}
+
 .main {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    position: absolute;
+    top: calc(30% + 185px);
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-family: space;
     color: #fff;
     font-size: 2rem;
@@ -81,43 +106,11 @@ a {
     font-size: 15px;
     padding: 20px 60px;
     text-decoration: none;
-    margin-top: 30px;
+    /* margin-top: 30px; */
+    position: absolute;
+    bottom: 30%;
     margin-left: 50%;
     transform: translateX(-50%);
-}
-
-.button:hover {
-    transition: ease-in 1s;
-    background-color: cornflowerblue;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#mainTitle {
-    position: absolute;
-    ;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* fill: white !important; */
-    /* animation: fill 1s ease forwards 2s; */
 }
 
 #mainTitle path:nth-child(1) {
