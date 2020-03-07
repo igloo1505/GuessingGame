@@ -1,260 +1,271 @@
 * {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 a {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 @font-face {
-    font-family: space;
-    src: url('./assets/Space.ttf');
+  font-family: space;
+  src: url("./assets/Space.ttf");
 }
 
 .containerMain {
-    width: min(80%, 960px);
-    margin: auto;
-    text-align: center;
+  width: min(80%, 960px);
+  margin: auto;
+  text-align: center;
 }
 
 .question {
-    color: #fff;
-    font-size: 2.2rem;
-    margin-top: 20%;
+  color: #fff;
+  font-size: 2.2rem;
+  margin-top: 20%;
+}
+#guesses {
+  color: #fff;
+  font-size: 2.2rem;
+  letter-spacing: 1.5rem;
+  margin-top: 20%;
+}
+
+.turns {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+}
+
+.turns h4 {
+  color: #fff;
+  font-size: 2rem;
+}
+.turns h5 {
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 .answer {
-    color: #fff;
-    display: block;
-    font-size: 2.6rem;
-    letter-spacing: 1.5rem;
-    margin-top: 40px;
+  color: #fff;
+  display: block;
+  font-size: 2.6rem;
+  letter-spacing: 1.5rem;
+  margin-top: 40px;
 }
 
 #answer {
-    color: #fff;
-    display: block;
-    font-size: 2.6rem;
-    letter-spacing: 1.5rem;
-    margin-top: 40px;
+  color: #fff;
+  display: block;
+  font-size: 2.6rem;
+  letter-spacing: 1.5rem;
+  margin-top: 40px;
 }
 
 .containerMain img {
-    object-fit: cover;
-    position: fixed;
-    z-index: -999;
-    min-width: 100vw;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
+  object-fit: cover;
+  position: fixed;
+  z-index: -999;
+  min-width: 100vw;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
 }
 
 .mainh1 {
-    margin-top: 20%;
-    font-family: space;
-    color: #fff;
-    font-size: 6rem;
-    font-weight: bold;
+  margin-top: 20%;
+  font-family: space;
+  color: #fff;
+  font-size: 6rem;
+  font-weight: bold;
 }
-
-
-
-
 
 .button:hover {
-    transition: ease-in 1s;
-    background-color: cornflowerblue;
+  transition: ease-in 1s;
+  background-color: cornflowerblue;
 }
 
-
-
-
-
 #mainTitle {
-    position: absolute;
-    ;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* fill: white !important; */
-    /* animation: fill 1s ease forwards 2s; */
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* fill: white !important; */
+  /* animation: fill 1s ease forwards 2s; */
 }
 
 .main {
-    /* margin-top: 1rem; */
-    position: absolute;
-    top: calc(30% + 185px);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: space;
-    color: #fff;
-    font-size: 2rem;
-    font-weight: 900;
+  /* margin-top: 1rem; */
+  position: absolute;
+  top: calc(30% + 185px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: space;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 900;
 }
 
 .button {
-    background-color: #2dabf9;
-    border-radius: 10px;
-    border: 1px solid #0b0e07;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff;
-    font-family: Space;
-    font-size: 15px;
-    padding: 20px 60px;
-    text-decoration: none;
-    /* margin-top: 30px; */
-    position: absolute;
-    bottom: 30%;
-    margin-left: 50%;
-    transform: translateX(-50%);
+  background-color: #2dabf9;
+  border-radius: 10px;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Space;
+  font-size: 15px;
+  padding: 20px 60px;
+  text-decoration: none;
+  /* margin-top: 30px; */
+  position: absolute;
+  bottom: 30%;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 #mainTitle path:nth-child(1) {
-    stroke-dasharray: 540px;
-    stroke-dashoffset: 40px;
-    animation: line-anim 2s ease forwards 0.1s;
-
+  stroke-dasharray: 540px;
+  stroke-dashoffset: 40px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(2) {
-    stroke-dasharray: 500px;
-    stroke-dashoffset: 500px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(3) {
-    stroke-dasharray: 581px;
-    stroke-dashoffset: 581px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 581px;
+  stroke-dashoffset: 581px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(4) {
-    stroke-dasharray: 514px;
-    stroke-dashoffset: 514px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 514px;
+  stroke-dashoffset: 514px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(5) {
-    stroke-dasharray: 556.7px;
-    stroke-dashoffset: 556.7px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 556.7px;
+  stroke-dashoffset: 556.7px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(6) {
-    stroke-dasharray: 378.3px;
-    stroke-dashoffset: 378.3px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 378.3px;
+  stroke-dashoffset: 378.3px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(7) {
-    stroke-dasharray: 544px;
-    stroke-dashoffset: 544px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 544px;
+  stroke-dashoffset: 544px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(8) {
-    stroke-dasharray: 603px;
-    stroke-dashoffset: 603px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 603px;
+  stroke-dashoffset: 603px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(9) {
-    stroke-dasharray: 603px;
-    stroke-dashoffset: 603px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 603px;
+  stroke-dashoffset: 603px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(10) {
-    stroke-dasharray: 544.87px;
-    stroke-dashoffset: 544.87px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 544.87px;
+  stroke-dashoffset: 544.87px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(11) {
-    stroke-dasharray: 581px;
-    stroke-dashoffset: 581px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 581px;
+  stroke-dashoffset: 581px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(12) {
-    stroke-dasharray: 539px;
-    stroke-dashoffset: 539px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 539px;
+  stroke-dashoffset: 539px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(13) {
-    stroke-dasharray: 500px;
-    stroke-dashoffset: 500px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(14) {
-    stroke-dasharray: 581px;
-    stroke-dashoffset: 581px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 581px;
+  stroke-dashoffset: 581px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(15) {
-    stroke-dasharray: 514px;
-    stroke-dashoffset: 514px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 514px;
+  stroke-dashoffset: 514px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(16) {
-    stroke-dasharray: 556px;
-    stroke-dashoffset: 556px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 556px;
+  stroke-dashoffset: 556px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(17) {
-    stroke-dasharray: 378px;
-    stroke-dashoffset: 378px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 378px;
+  stroke-dashoffset: 378px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(18) {
-    stroke-dasharray: 544px;
-    stroke-dashoffset: 544px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 544px;
+  stroke-dashoffset: 544px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(19) {
-    stroke-dasharray: 603px;
-    stroke-dashoffset: 603px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 603px;
+  stroke-dashoffset: 603px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(20) {
-    stroke-dasharray: 603px;
-    stroke-dashoffset: 603px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 603px;
+  stroke-dashoffset: 603px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(21) {
-    stroke-dasharray: 544px;
-    stroke-dashoffset: 544px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 544px;
+  stroke-dashoffset: 544px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 #mainTitle path:nth-child(22) {
-    stroke-dasharray: 581px;
-    stroke-dashoffset: 581px;
-    animation: line-anim 2s ease forwards 0.1s;
+  stroke-dasharray: 581px;
+  stroke-dashoffset: 581px;
+  animation: line-anim 2s ease forwards 0.1s;
 }
 
 @keyframes line-anim {
-    to {
-        stroke-dashoffset: 0;
-        stroke-dasharray: 0;
-    }
+  to {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0;
+  }
 }
 
 @keyframes fill {
-    to {
-        fill: white
-    }
+  to {
+    fill: white;
+  }
 }
