@@ -7,6 +7,21 @@ var questions = [
   {
     question: "Einstein's miracle year is known as?",
     answer: "annus mirabilis"
+  },
+  {
+    question:
+      "When a doctoral professor became skeptical of how a single student stood out to such a degree, this famous theoretical physicist almost never earned a Phd after he didn't understand how a battery works?",
+    answer: "werner heisenberg"
+  },
+  {
+    question:
+      "This tiny animal that can survive in nearly every known environment on earth has NASA astrobiologists legitimately considering panspermia as a means for life on earth.",
+    answer: "tardigrade"
+  },
+  {
+    question:
+      "The greatest mystery in all of Physics, and likely all of science, the wave function collapse has an accurate probability function named after this physicist.",
+    answer: "schrodinger"
   }
 ];
 
@@ -82,10 +97,9 @@ const setPlay = () => {
     console.log(answer.length);
     console.log(word.length);
     let key = event.key;
-    // console.log("answer index" + answer.indexOf(key));
+
     if (alphabet.includes(key)) {
       if (answer.indexOf(key) === -1 && guessed.indexOf(key) === -1) {
-        // console.log("guessed" + guessed);
         guessed.push(key);
         guessesRemaining--;
         if (guessesRemaining === 0) {
@@ -110,18 +124,6 @@ const setPlay = () => {
             newWord = newWord += word[i];
           }
           console.log(newWord);
-          // word = newWord;
-          // for (var p = 0; p < word.length; p++) {
-          //   if (p !== i) {
-          //     wordToArray.push(word[p]);
-          //   } else {
-          //     wordToArray.push(answer[i]);
-          //   }
-          //   console.log("array " + wordToArray);
-          //   console.log("joined " + wordToArray.toString());
-          // }
-          // allIndexes.push(answer[i]);
-          // word = wordToArray.toString();
         }
         word = newWord;
       }
