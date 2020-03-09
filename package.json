@@ -1,0 +1,23 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igloo1505/GuessingGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igloo1505/GuessingGame/issues"
+  },
+  "homepage": "https://github.com/igloo1505/GuessingGame#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "lodash": "^4.17.15"
+  }
+}

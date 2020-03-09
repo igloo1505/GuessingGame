@@ -37,6 +37,8 @@ const setPlay = () => {
   var answerDocument = document.getElementById("answer");
   var turnsDocument = document.getElementById("turns");
   var guessesDocument = document.getElementById("guesses");
+  var winAlert = document.getElementById("winAlert");
+  var lossAlert = document.getElementById("lossAlert");
 
   questionDocument.innerHTML = question;
 
@@ -102,7 +104,8 @@ const setPlay = () => {
         guessesRemaining--;
         if (guessesRemaining === 0) {
           word = answer;
-          let again = confirm("try again?");
+          lossAlert.classList.add("alert");
+          lossAlert.classList.add("alert-danger");
           console.log(again);
           if (again) {
             playing = false;
@@ -137,7 +140,11 @@ const setPlay = () => {
       console.log("guessedCorrectly" + guessedCorrectly);
 
       if (correctCount === Length) {
-        alert("YAY! You're like Einstein");
+        // alert("YAY! You're like Einstein");
+        console.log("classes should be added here");
+        winAlert.classList.add("alert");
+        winAlert.classList.add("alert-success");
+
         playing = false;
         setPlay();
       }
