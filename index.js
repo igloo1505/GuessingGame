@@ -22,6 +22,16 @@ var questions = [
     question:
       "The greatest mystery in all of Physics, and likely all of science, the wave function collapse has an accurate probability function named after this physicist.",
     answer: "schrodinger"
+  },
+  {
+    question:
+      "In 1915, Einstein used this concept to prove that the mass of the sun bended space itself by effecting a massless photon traveling past.",
+    answer: "gravitation lensing"
+  },
+  {
+    question:
+      "Although the numerical value varies between observation and theory, this value was derived from Einstein himself which he later called 'his greatest blunder'",
+    answer: "cosmological constant"
   }
 ];
 
