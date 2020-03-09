@@ -34,6 +34,19 @@ var questions = [
     answer: "cosmological constant"
   }
 ];
+let lossInput = [
+  {
+    input:
+      "It's ok. Schrodinger couldn't figure out how to get his cat out of a box."
+  },
+  {
+    input:
+      "Einstein's IQ is estimated at around 158. He also married his cousin. Don't feel so bad."
+  },
+  {
+    input: "Don't worry. Heisenberg was uncertain about a lot of things."
+  }
+];
 
 const setPlay = () => {
   let Random = {};
@@ -48,6 +61,7 @@ const setPlay = () => {
   var turnsDocument = document.getElementById("turns");
   var guessesDocument = document.getElementById("guesses");
   var winAlert = document.getElementById("winAlert");
+  var lossText = document.getElementById("lossText");
   var lossAlert = document.getElementById("lossAlert");
 
   questionDocument.innerHTML = question;
@@ -108,12 +122,22 @@ const setPlay = () => {
   document.onkeydown = () => {
     let key = event.key;
 
+    //!! SIMULATE LOSS OR WIN FOR DEVELOPMENT ONLY
+    if (key === "x") {
+      lossText.innerHTML =
+        lossInput[Math.floor(Math.random() * lossInput.length)].input;
+      lossAlert.classList.add("alert");
+      lossAlert.classList.add("alert-danger");
+    }
+
     if (alphabet.includes(key)) {
       if (answer.indexOf(key) === -1 && guessed.indexOf(key) === -1) {
         guessed.push(key);
         guessesRemaining--;
         if (guessesRemaining === 0) {
           word = answer;
+          lossAlert.innerHTML =
+            lossInput[Math.floor(Math.random() * lossInput.length)].input;
           lossAlert.classList.add("alert");
           lossAlert.classList.add("alert-danger");
           console.log(again);
