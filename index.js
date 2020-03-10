@@ -26,7 +26,7 @@ var questions = [
   {
     question:
       "In 1915, Einstein used this concept to prove that the mass of the sun bended space itself by effecting a massless photon traveling past.",
-    answer: "gravitation lensing"
+    answer: "gravitational lensing"
   },
   {
     question:
