@@ -122,13 +122,11 @@ const setPlay = () => {
   document.onkeydown = () => {
     let key = event.key;
 
-    //!! SIMULATE LOSS OR WIN FOR DEVELOPMENT ONLY
-    if (key === "x") {
-      lossText.innerHTML =
-        lossInput[Math.floor(Math.random() * lossInput.length)].input;
-      lossAlert.classList.add("alert");
-      lossAlert.classList.add("alert-danger");
-    }
+    const setPlaying = () => {
+      playing = false;
+      turnsDocument.innerHTML = 10;
+      guessesDocument.innerHTML = "";
+    };
 
     if (alphabet.includes(key)) {
       if (answer.indexOf(key) === -1 && guessed.indexOf(key) === -1) {
@@ -179,8 +177,10 @@ const setPlay = () => {
         winAlert.classList.add("alert");
         winAlert.classList.add("alert-success");
 
-        playing = false;
-        setPlay();
+        console.log("timeout function called");
+
+        setTimeout(() => setPlaying(), 2000);
+        setTimeout(() => setPlay(), 2000);
       }
     }
     if (playing === true) {
