@@ -167,6 +167,7 @@ const setPlay = () => {
           Length++;
         }
       }
+
       console.log("correct " + correctCount);
       console.log("length" + Length);
       console.log("guessedCorrectly" + guessedCorrectly);
@@ -176,11 +177,14 @@ const setPlay = () => {
         console.log("classes should be added here");
         winAlert.classList.add("alert");
         winAlert.classList.add("alert-success");
-
         console.log("timeout function called");
-
-        setTimeout(() => setPlaying(), 2000);
-        setTimeout(() => setPlay(), 2000);
+        const resetAlerts = () => {
+          winAlert.classList.remove("alert");
+          winAlert.classList.remove("alert-success");
+        };
+        setTimeout(() => resetAlerts(), 3000);
+        setTimeout(() => setPlaying(), 5000);
+        setTimeout(() => setPlay(), 5000);
       }
     }
     if (playing === true) {
