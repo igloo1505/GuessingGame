@@ -132,17 +132,20 @@ const setPlay = () => {
       if (answer.indexOf(key) === -1 && guessed.indexOf(key) === -1) {
         guessed.push(key);
         guessesRemaining--;
-        if (guessesRemaining === 0) {
+        if (guessesRemaining <= 0) {
           word = answer;
           lossAlert.innerHTML =
             lossInput[Math.floor(Math.random() * lossInput.length)].input;
           lossAlert.classList.add("alert");
           lossAlert.classList.add("alert-danger");
-          console.log(again);
-          if (again) {
-            playing = false;
-            setPlay();
-          }
+
+          const resetFailAlerts = () => {
+            lossAlert.classList.remove("alert");
+            lossAlert.classList.remove("alert-danger");
+          };
+          setTimeout(() => resetFailAlerts(), 3000);
+          setTimeout(() => setPlaying(), 5000);
+          setTimeout(() => setPlay(), 5000);
         }
       } else if (
         answer.indexOf(key) !== -1 &&
