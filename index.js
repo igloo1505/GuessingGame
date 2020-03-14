@@ -63,7 +63,8 @@ const setPlay = () => {
   var winAlert = document.getElementById("winAlert");
   var lossText = document.getElementById("lossText");
   var lossAlert = document.getElementById("lossAlert");
-
+  var successSound = new Audio("./assets/success.mp3");
+  var errorSound = new Audio("./assets/error.mp3");
   questionDocument.innerHTML = question;
 
   let alphabet = [
@@ -143,6 +144,7 @@ const setPlay = () => {
             lossAlert.classList.remove("alert");
             lossAlert.classList.remove("alert-danger");
           };
+          errorSound.play();
           setTimeout(() => resetFailAlerts(), 3000);
           setTimeout(() => setPlaying(), 5000);
           setTimeout(() => setPlay(), 5000);
@@ -185,6 +187,7 @@ const setPlay = () => {
           winAlert.classList.remove("alert");
           winAlert.classList.remove("alert-success");
         };
+        successSound.play();
         setTimeout(() => resetAlerts(), 3000);
         setTimeout(() => setPlaying(), 5000);
         setTimeout(() => setPlay(), 5000);
